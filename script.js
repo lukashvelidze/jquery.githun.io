@@ -12,11 +12,11 @@ $(document).ready(function() {
       if (bio.is(":visible")) {
         btn.text("Show Less");
         profileCard.addClass("expanded");
-        profilePic.css("transform", "scale(1.1)");  // Enlarge the profile picture when expanded
+        profilePic.addClass("blurred"); // Apply blur to the profile picture when expanded
       } else {
         btn.text("Show More");
         profileCard.removeClass("expanded");
-        profilePic.css("transform", "scale(1)");  // Return profile picture to normal size
+        profilePic.removeClass("blurred"); // Remove blur when collapsed
       }
     });
   });

@@ -1,66 +1,95 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
+    background-color: #1a1a1a;
   }
   
   .profile-card {
-    width: 300px;
-    height: 150px;
+    width: 320px;
     background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: height 0.3s ease;
+    transition: all 0.5s ease;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: #3b5998;
+    color: #fff;
   }
   
   .profile-image {
-    text-align: center;
-    padding: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
   }
   
   .profile-image img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    transition: filter 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-name h2 {
+    font-size: 24px;
+    font-weight: 600;
   }
   
   .profile-info {
-    padding: 10px 20px;
-    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
   }
   
-  .profile-info h2 {
-    font-size: 22px;
-    margin: 0;
-  }
-  
-  .profile-info p {
+  .bio {
+    display: none;
     font-size: 14px;
     color: #666;
-    margin-top: 10px;
-    display: none; /* Initially hide the bio */
+    margin-bottom: 20px;
+    line-height: 1.6;
     transition: opacity 0.3s ease;
   }
   
   #toggle-btn {
-    margin-top: 15px;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+    background-color: #3b5998;
+    color: #fff;
     font-size: 14px;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 100%;
+    transition: background-color 0.3s ease;
   }
   
   #toggle-btn:hover {
-    background-color: #0056b3;
+    background-color: #2d4373;
   }
+  
+  .profile-card.expanded {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-card .profile-image img {
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-card.expanded .profile-image img {
+    transform: scale(1.1);
+  }
+  
   
